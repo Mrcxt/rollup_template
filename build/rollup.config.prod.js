@@ -2,7 +2,15 @@ import config from './rollup.config'
 import { terser } from 'rollup-plugin-terser'
 
 
-config.output.sourcemap = false;
+if (Array.isArray(config.output)) {
+    config.output.forEach((item, i) => {
+        config.output[i].sourcemap = false;
+    })
+} else {
+    config.output.sourcemap = false;
+}
+
+
 
 config.plugins = [
     ...config.plugins,
