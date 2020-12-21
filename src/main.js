@@ -1,5 +1,3 @@
-import module1 from './modules/module_1'
-import './styles/base.less'
+import isType from './libs/isType'
 
-module1.setName('我是 module1')
-console.log(module1.getName());
+console.log(isType({}, 'object'));

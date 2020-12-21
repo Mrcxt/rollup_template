@@ -4,7 +4,7 @@
     "main": "index.js",
     "license": "MIT",
     "scripts": {
-        "dev": "rollup --config build/rollup.config.dev.js",
+        "dev": "rollup --config build/rollup.config.dev.js -w",
         "build": "rollup --config build/rollup.config.prod.js"
     },
     "dependencies": {
